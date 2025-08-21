@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Policial - Caso SQL City</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+        
+        body {
+            font-family: 'Special Elite', monospace;
+            background-color: #f8f3e6;
+            color: #3a3229;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23b39f7c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fdfaf0;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d9c7a6;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #8c7b5c;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stamp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0.7;
+            transform: rotate(15deg);
+            color: #8c2e2e;
+            font-size: 16px;
+            border: 2px solid #8c2e2e;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        h1, h2, h3 {
+            color: #5c4b37;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .underline {
+            text-decoration: underline;
+        }
+        
+        .signature {
+            margin-top: 50px;
+            border-top: 1px solid #8c7b5c;
+            padding-top: 10px;
+            width: 300px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            text-align: center;
+            color: #8c7b5c;
+        }
+        
+        .typed {
+            border-right: 2px solid #3a3229;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3a3229 }
+        }
+        
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+        
+        .ribbon span {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            width: 140px;
+            padding: 5px 0;
+            background: #5c4b37;
+            color: #fdfaf0;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ribbon"><span>CONFIDENCIAL</span></div>
+        <div class="stamp">ARCHIVADO<br>21-AGO-2025</div>
+        
+        <div class="header">
+            <h1>INFORME POLICIAL - CASO: ASESINATO SQL CITY</h1>
+            <p><strong>Número de Caso:</strong> SC-2018-015</p>
+            <p><strong>Fecha del Crimen:</strong> 15 de Enero de 2018</p>
+            <p><strong>Lugar:</strong> SQL City</p>
+            <p><strong>Fecha del Informe:</strong> 21 de Agosto de 2025</p>
+            <p><strong>Unidad Investigadora:</strong> Detectives: Vanderlene, Efrén, Miguel Ballesteros, Saúl, Gabriel</p>
+        </div>
+        
+        <div class="section">
+            <h2>I. RESUMEN EJECUTIVO</h2>
+            <p>Tras una exhaustiva investigación basada en el análisis de datos y testimonios, se ha resuelto el caso de asesinato ocurrido el 15 de enero de 2018 en SQL City. El autor material del crimen fue <span class="underline">Jeremy Bowers</span> (ID: 67318), quien actuó bajo las órdenes de <span class="underline">Miranda Priestly</span>, la autora intelectual del homicidio.</p>
+        </div>
+        
+        <div class="section">
+            <h2>II. CRONOLOGÍA DE LA INVESTIGACIÓN</h2>
+            
+            <h3>Fase 1: Hallazgo Inicial y Testigos</h3>
+            <p>- El informe del crimen (CSR) indicaba la existencia de <strong>dos testigos</strong>:</p>
+            <p>1. Un testigo residente en la última casa de <strong>Northwestern Dr</strong>.</p>
+            <p>2. Una testigo de nombre <strong>Annabel</strong>, residente en <strong>Franklin Ave</strong>.</p>
+            <p>- <strong>Testigos Identificados</strong>:</p>
+            <p>- <strong>Morty Schapiro</strong> (ID: 14887), 4919 Northwestern Dr.</p>
+            <p>- <strong>Annabel Miller</strong> (ID: 16371), 490 Franklin Ave.</p>
+            
+            <h3>Fase 2: Declaraciones Clave</h3>
+            <p>- <strong>Declaración de Morty Schapiro</strong>:</p>
+            <p>- Observó al sospechoso huir con una <strong>bolsa del gimnasio "Get Fit Now"</strong> (número de membresía comenzando con "48Z").</p>
+            <p>- El sospechoso era <strong>miembro gold</strong> del gimnasio.</p>
+            <p>- Huyó en un vehículo con matrícula que contenía <strong>"H42W"</strong>.</p>
+            
+            <p>- <strong>Declaración de Annabel Miller</strong>:</p>
+            <p>- Reconoció al asesino del gimnasio donde ejercitaba el <strong>9 de enero de 2018</strong>.</p>
+            
+            <h3>Fase 3: Análisis del Gimnasio</h3>
+            <p>- Registros del gimnasio del <strong>9 de enero de 2018</strong> mostraron dos miembros con membresías <strong>48Z55 y 48Z7A</strong> (ambos gold).</p>
+            <p>- <strong>Jeremy Bowers</strong> (48Z55): Entrada 15:30, Salida 17:00.</p>
+            <p>- Joe Germuska (48Z7A): Entrada 16:00, Salida 17:30.</p>
+            
+            <h3>Fase 4: Evidencia Vehicular</h3>
+            <p>- Búsqueda en la base de datos de vehículos con matrícula conteniendo <strong>"H42W"</strong> arrojó tres resultados:</p>
+            <p>1. <strong>Jeremy Bowers</strong> (Matrícula: 0H42W2, Chevrolet Spark LS).</p>
+            <p>2. Maxine Whitely (Toyota Prius).</p>
+            <p>3. Tushar Chandra (Nissan Altima).</p>
+            
+            <h3>Fase 5: Identificación del Asesino Material</h3>
+            <p>- <strong>Jeremy Bowers</strong> fue identificado como el autor material del crimen al cumplir con:</p>
+            <p>- Membresía gold en el gimnasio (48Z55).</p>
+            <p>- Coincidencia de horario en el gimnasio el 9 de enero.</p>
+            <p>- Propiedad de vehículo con matrícula relacionada (0H42W2).</p>
+            
+            <h3>Fase 6: Confesión y Autora Intelectual</h3>
+            <p>- <strong>Jeremy Bowers</strong> confesó en su entrevista:</p>
+            <p>- Fue contratado por una <strong>mujer adinerada</strong>.</p>
+            <p>- <strong>Descripción física</strong>: ~1.65m-1.70m, cabello rojo, conduce un Tesla Model S.</p>
+            <p>- Asistió <strong>tres veces</strong> al "SQL Symphony Concert" en diciembre de 2017.</p>
+            
+            <p>- Investigación de licencias de conducir y eventos:</p>
+            <p>- <strong>Tres sospechosas</strong> con Tesla Model S y cabello rojo:</p>
+            <p>1. Regina George</p>
+            <p>2. <strong>Miranda Priestly</strong></p>
+            <p>3. Red Korb</p>
+            <p>- Verificación de eventos: <strong>Solo Miranda Priestly</strong> asistió tres veces al concierto en diciembre de 2017.</p>
+        </div>
+        
+        <div class="section">
+            <h2>III. CONCLUSIONES</h2>
+            <p>1. <strong>Autor Material</strong>: Jeremy Bowers (ID: 67318).</p>
+            <p>2. <strong>Autora Intelectual</strong>: Miranda Priestly (ID: 99716), quien contrató a Bowers para cometer el homicidio.</p>
+            <p>3. <strong>Motivo</strong>: Desconocido (posibles conflictos financieros o personales, pendiente de investigación adicional).</p>
+        </div>
+        
+        <div class="section">
+            <h2>IV. ACCIONES TOMADAS</h2>
+            <p>- Jeremy Bowers fue arrestado y confesó el crimen.</p>
+            <p>- Miranda Priestly fue detenida bajo cargos de conspiración y homicidio en primer grado.</p>
+            <p>- Se recomienda profundizar en la relación entre Priestly y la víctima para establecer el motivo.</p>
+        </div>
+        
+        <div class="section">
+            <h2>V. EVIDENCIAS CLAVE</h2>
+            <p>1. Testimonios de Morty Schapiro y Annabel Miller.</p>
+            <p>2. Registros del gimnasio (Get Fit Now) del 9 de enero de 2018.</p>
+            <p>3. Matrícula del vehículo de huida (0H42W2).</p>
+            <p>4. Declaración de Jeremy Bowers.</p>
+            <p>5. Registros de eventos (SQL Symphony Concert) que implican a Miranda Priestly.</p>
+        </div>
+        
+        <div class="signature">
+            <p><em>Sello oficial de la Policía de SQL City</em></p>
+        </div>
+        
+        <div class="footer">
+            <p>Este documento es confidencial y para uso exclusivo de las autoridades competentes.</p>
+        </div>
+    </div>
+
+    <script>
+        // Efecto de máquina de escribir para el título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('h1');
+            const originalText = title.textContent;
+            title.textContent = '';
+            title.classList.add('typed');
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    title.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            };
+            
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
