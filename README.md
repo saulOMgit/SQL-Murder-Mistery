@@ -3,6 +3,7 @@
 ## 📋 Descripción del Proyecto
 
 Este repositorio documenta la investigación de un caso de asesinato ficticio en SQL City, resuelto mediante el análisis de bases de datos y consultas SQL. El caso fue resuelto colaborativamente por el equipo de investigación y se presenta en formato de informe policial con estilo vintage.
+[Enlace a nuestra investigación](https://www.notion.so/gabrielml/SQL-Murder-Mystery-25684ead1e8f806ab3f7d626a22a9846)
 
 ## 🎯 Objetivo
 
