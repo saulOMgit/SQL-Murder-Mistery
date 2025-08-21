@@ -83,7 +83,7 @@ El informe final presenta:
 ## 🚀 Cómo Utilizar
 
 1. Clona o descarga este repositorio
-2. Abre el archivo `informe-policial.html` en cualquier navegador web
+2. Abre el archivo `informe-policial.html` en cualquier navegador web o [Clickando Aquí](https://saulomgit.github.io/SQL-Murder-Mistery/)
 3. Para generar un PDF:
    - Usa la función de impresión de tu navegador
    - Selecciona "Guardar como PDF" como destino
