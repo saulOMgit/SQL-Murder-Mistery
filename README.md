@@ -1,103 +1,107 @@
-🕵️ SQL Murder Mystery - Informe Policial
-📋 Descripción del Proyecto
+# 🕵️ SQL Murder Mystery - Informe Policial
+
+## 📋 Descripción del Proyecto
+
 Este repositorio documenta la investigación de un caso de asesinato ficticio en SQL City, resuelto mediante el análisis de bases de datos y consultas SQL. El caso fue resuelto colaborativamente por el equipo de investigación y se presenta en formato de informe policial con estilo vintage.
 
-🎯 Objetivo
+## 🎯 Objetivo
+
 Resolver el misterio del asesinato ocurrido el 15 de enero de 2018 en SQL City, identificando tanto al autor material como al intelectual del crimen mediante el análisis de bases de datos relacionales y la ejecución de consultas SQL específicas.
 
-👥 Equipo de Investigación
-Vanderlene
+## 👥 Equipo de Investigación
 
-Efrén
+- **Vanderlene**
+- **Efrén**
+- **Miguel Ballesteros**
+- **Saúl**
+- **Gabriel**
 
-Miguel Ballesteros
+## 🛠️ Herramientas Utilizadas
 
-Saúl
+- **SQL**: Para consultas y análisis de datos
+- **Navegador web**: Para acceso a la plataforma Mystery KnightLab
+- **HTML/CSS**: Para la presentación del informe final
 
-Gabriel
+## 🗂️ Estructura del Proyecto
 
-🛠️ Herramientas Utilizadas
-SQL: Para consultas y análisis de datos
-
-Navegador web: Para acceso a la plataforma Mystery KnightLab
-
-HTML/CSS: Para la presentación del informe final
-
-🗂️ Estructura del Proyecto
-text
+```
 sql-murder-mystery/
 │
 ├── informe-policial.html    # Informe completo en formato HTML
-├── queries.sql              # Consultas SQL utilizadas en la investigación
 └── README.md                # Este archivo
-🔍 Metodología de Investigación
-Paso 1: Reporte de la Escena del Crimen
+```
+
+## 🔍 Metodología de Investigación
+
+### Paso 1: Reporte de la Escena del Crimen
+
 Consulta inicial para obtener detalles del reporte policial del día del asesinato.
 
-Paso 2: Identificación de Testigos
+### Paso 2: Identificación de Testigos
+
 Localización y entrevista de los dos testigos del crimen.
 
-Paso 3: Análisis de Declaraciones
+### Paso 3: Análisis de Declaraciones
+
 Extracción de información clave de las entrevistas a testigos.
 
-Paso 4: Investigación en el Gimnasio
+### Paso 4: Investigación en el Gimnasio
+
 Consulta de registros de entrada/salida y membresías.
 
-Paso 5: Evidencia Vehicular
+### Paso 5: Evidencia Vehicular
+
 Búsqueda de vehículos relacionados con la descripción del sospechoso.
 
-Paso 6: Identificación del Asesino Material
+### Paso 6: Identificación del Asesino Material
+
 Correlación de evidencias para identificar a Jeremy Bowers como autor material.
 
-Paso 7: Descubrimiento de la Autora Intelectual
+### Paso 7: Descubrimiento de la Autora Intelectual
+
 Análisis de la confesión del asesino para identificar a Miranda Priestly como mandante.
 
-📊 Consultas SQL Clave
+## 📊 Consultas SQL Clave
+
 Las consultas utilizadas incluyen:
 
-Selecciones básicas con filtros
+- Selecciones básicas con filtros
+- Consultas con operadores LIKE para búsqueda de patrones
+- Uniones (JOIN) entre tablas relacionadas
+- Ordenamiento y agrupación de resultados
 
-Consultas con operadores LIKE para búsqueda de patrones
+## 🎨 Características del Informe
 
-Uniones (JOIN) entre tablas relacionadas
-
-Ordenamiento y agrupación de resultados
-
-🎨 Características del Informe
 El informe final presenta:
 
-Diseño estilo máquina de escribir con tonos sepia
+- Diseño estilo máquina de escribir con tonos sepia
+- Estructura formal de documento policial
+- Animación de texto que simula escritura mecanográfica
+- Sello de confidencialidad y fecha de archivado
+- Diseño responsive compatible con dispositivos móviles
 
-Estructura formal de documento policial
+## 🚀 Cómo Utilizar
 
-Animación de texto que simula escritura mecanográfica
+1. Clona o descarga este repositorio
+2. Abre el archivo `informe-policial.html` en cualquier navegador web
+3. Para generar un PDF:
+   - Usa la función de impresión de tu navegador
+   - Selecciona "Guardar como PDF" como destino
 
-Sello de confidencialidad y fecha de archivado
+## 🌐 Enlace al Caso Original
 
-Diseño responsive compatible con dispositivos móviles
+El misterio original está disponible en: [SQL Murder Mystery](https://mystery.knightlab.com/)
 
-🚀 Cómo Utilizar
-Clona o descarga este repositorio
+## 📝 Notas Adicionales
 
-Abre el archivo informe-policial.html en cualquier navegador web
+- El informe está en español como se solicitó
+- El diseño simula un documento oficial antiguo con efecto de máquina de escribir
+- Todas las consultas SQL fueron validadas en la plataforma KnightLab
 
-Para generar un PDF:
+## 📄 Licencia
 
-Usa la función de impresión de tu navegador
-
-Selecciona "Guardar como PDF" como destino
-
-🌐 Enlace al Caso Original
-El misterio original está disponible en: SQL Murder Mystery
-
-📝 Notas Adicionales
-El informe está en español como se solicitó
-
-El diseño simula un documento oficial antiguo con efecto de máquina de escribir
-
-Todas las consultas SQL fueron validadas en la plataforma KnightLab
-
-📄 Licencia
 Este proyecto es de carácter educativo y se basa en el ejercicio SQL Murder Mystery de KnightLab.
 
-Documento confidencial - Departamento de Policía de SQL City
+---
+
+*Documento confidencial - Departamento de Policía de SQL City*
